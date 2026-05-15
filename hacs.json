@@ -1,0 +1,6 @@
+{
+  "name": "Bestway Smart Hub",
+  "domains": ["bestway"],
+  "homeassistant": "2024.1.0",
+  "render_readme": true
+}

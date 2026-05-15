@@ -1,0 +1,21 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Bestway Smart Hub",
+        "description": "Enter your Bestway app credentials and API region.",
+        "data": {
+          "username": "E-Mail",
+          "password": "Password",
+          "region": "API Region"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect. Check credentials and region."
+    },
+    "abort": {
+      "already_configured": "Account is already configured."
+    }
+  }
+}
