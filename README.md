@@ -1,3 +1,3 @@
 # ha-bestway
 
-Home Assistant Integration for Bestway Smart Hub / Lay-Z-Spa
+Home Assistant Custom Integration for Bestway / Lay-Z-Spa Smart Hub (coming soon).
