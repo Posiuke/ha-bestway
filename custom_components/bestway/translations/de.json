@@ -5,7 +5,7 @@
         "title": "Bestway Smart Hub",
         "description": "Gib deine Bestway-App-Zugangsdaten und API-Region ein.",
         "data": {
-          "username": "E-Mail",
+          "email": "E-Mail",
           "password": "Passwort",
           "region": "API-Region"
         }

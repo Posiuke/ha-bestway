@@ -6,9 +6,6 @@ DOMAIN = "bestway"
 PLATFORMS = ["climate", "switch", "sensor", "binary_sensor"]
 
 CONF_REGION = "region"
-CONF_EMAIL = "email"
-CONF_PASSWORD = "password"
-
 DEFAULT_REGION = "euapi"
 API_REGIONS = ["euapi", "usapi", "aaapi"]
 

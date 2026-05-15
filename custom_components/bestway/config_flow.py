@@ -7,7 +7,7 @@ from typing import Any
 import voluptuous as vol
 
 from homeassistant import config_entries
-from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
+from homeassistant.const import CONF_EMAIL, CONF_PASSWORD
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from .api import BestwayApi, BestwayApiError
@@ -29,12 +29,12 @@ class BestwayConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
             try:
                 uid = await api.async_login(
-                    user_input[CONF_USERNAME],
+                    user_input[CONF_EMAIL],
                     user_input[CONF_PASSWORD],
                 )
                 await self.async_set_unique_id(uid)
                 self._abort_if_unique_id_configured()
-                return self.async_create_entry(title=user_input[CONF_USERNAME], data=user_input)
+                return self.async_create_entry(title=user_input[CONF_EMAIL], data=user_input)
             except BestwayApiError:
                 errors["base"] = "cannot_connect"
 
@@ -42,7 +42,7 @@ class BestwayConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
             step_id="user",
             data_schema=vol.Schema(
                 {
-                    vol.Required(CONF_USERNAME): str,
+                    vol.Required(CONF_EMAIL): str,
                     vol.Required(CONF_PASSWORD): str,
                     vol.Required(CONF_REGION, default=DEFAULT_REGION): vol.In(API_REGIONS),
                 }
